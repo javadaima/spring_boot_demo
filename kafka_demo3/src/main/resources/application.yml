@@ -1,0 +1,5 @@
+server:
+  port: 21118
+spring:
+  application:
+    name: kafka-demo
