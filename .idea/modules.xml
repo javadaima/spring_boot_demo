@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis2/demo (1).iml" filepath="$PROJECT_DIR$/redis2/demo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/design_pattern/design_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis2/redis2.iml" filepath="$PROJECT_DIR$/redis2/redis2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring_boot_demo.iml" filepath="$PROJECT_DIR$/.idea/spring_boot_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring_springmvc_mybatis/spring_springmvc_mybatis.iml" filepath="$PROJECT_DIR$/spring_springmvc_mybatis/spring_springmvc_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_springmvc_mybatis/springboot-mybatis-demo.iml" filepath="$PROJECT_DIR$/spring_springmvc_mybatis/springboot-mybatis-demo.iml" />
     </modules>
   </component>
 </project>

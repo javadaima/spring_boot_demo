@@ -18,6 +18,12 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = "小明";
+    }
+
+    public static void main(String[] args) {
+        User user = new User();
+        user.setName("123");
+        System.out.println(user.getName());
     }
 }
