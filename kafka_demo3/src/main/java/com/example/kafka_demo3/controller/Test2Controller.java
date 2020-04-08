@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestController {
+public class Test2Controller {
 
     @Autowired
     private KafkaTemplate<Object, Object> template;
 
-    @GetMapping("/send2/{input}")
+    @GetMapping("/send/{input}")
     public void sendFoo(@PathVariable String input) {
         this.template.send("topic1", input);
     }
-    @KafkaListener(id = "webGroup2", topics = "test_topic")
+    @KafkaListener(id = "webGroup", topics = "test_topic")
     public void listen(String input) {
-        System.out.println("input1 value: {}"+input);
+        System.out.println("input2 value: {}"+input);
     }
 
 
