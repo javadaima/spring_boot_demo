@@ -18,7 +18,7 @@ public class TestController {
     public void sendFoo(@PathVariable String input) {
         this.template.send("topic1", input);
     }
-    @KafkaListener(id = "webGroup2", topics = "test_topic")
+    @KafkaListener(id = "webGroup2", topics = "test_topic",groupId = "group1")
     public void listen(String input) {
         System.out.println("input1 value: {}"+input);
     }

@@ -39,4 +39,4 @@ spring:
       concurrency: 5
       #listner负责ack，每调用一次，就立即commit
       ack-mode: manual_immediate
-      missing-topics-fatal: false
+      #missing-topics-fatal: false
