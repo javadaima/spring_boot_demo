@@ -15,7 +15,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 @Configuration
 public class KafkaConfig {
 
-	@Bean
+	/*@Bean
 	public KafkaAdmin admin(KafkaProperties properties){
 		KafkaAdmin admin = new KafkaAdmin(properties.buildAdminProperties());
 		admin.setFatalIfBrokerNotAvailable(true);
@@ -24,5 +24,5 @@ public class KafkaConfig {
 	@Bean
 	public NewTopic topic2() {
 		return new NewTopic("test1", 1, (short) 1);
-	}
+	}*/
 }
