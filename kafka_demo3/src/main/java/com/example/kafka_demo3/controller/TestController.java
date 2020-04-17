@@ -1,27 +1,27 @@
 package com.example.kafka_demo3.controller;
 
-
+import com.example.kafka_demo3.mapper.UserDAO;
+import com.example.kafka_demo3.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/test")
 public class TestController {
-
     @Autowired
-    private KafkaTemplate<Object, Object> template;
+    private UserDAO UserDAO;
 
-    @GetMapping("/send2/{input}")
-    public void sendFoo(@PathVariable String input) {
-        this.template.send("topic1", input);
+    @RequestMapping("/jemeter1")
+    public void test1() throws InterruptedException {
+        Thread thread = Thread.currentThread();
+        //thread.sleep(1000);
+        System.out.println(thread.getName());
     }
-    @KafkaListener(id = "webGroup2", topics = "test_topic",groupId = "group1")
-    public void listen(String input) {
-        System.out.println("input1 value: {}"+input);
+    @RequestMapping("/addOrder")
+    public void addOrder(){
+        User user = new User();
+        UserDAO.save(user);
     }
-
 
 }

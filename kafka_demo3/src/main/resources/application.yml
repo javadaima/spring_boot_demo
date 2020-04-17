@@ -40,3 +40,20 @@ spring:
       #listner负责ack，每调用一次，就立即commit
       ack-mode: manual_immediate
       #missing-topics-fatal: false
+
+  datasource:
+    url: jdbc:mysql://106.54.34.74:3306/test
+    username: root
+    password: root123
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jpa:
+      database: MYSQL
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5Dialect
+
+

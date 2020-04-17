@@ -1,4 +1,4 @@
-package com.example.kafka_demo3.controller;
+package com.example.kafka_demo3.consumer;
 
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -18,7 +18,7 @@ import java.util.List;
 @RestController
 public class Test2Controller {
 
-    @KafkaListener(id = "webGroup", topics = "test_topic",groupId = "group1")
+    @KafkaListener(topics = "test1",groupId = "group1")
    /* public void listen(String input) {
         System.out.println("input2 value: {}"+input);
     }*/
