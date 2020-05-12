@@ -2,15 +2,22 @@ package com.example.kafka_demo3.controller;
 
 import com.example.kafka_demo3.mapper.UserDAO;
 import com.example.kafka_demo3.model.User;
+import com.example.kafka_demo3.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/test")
 public class TestController {
     @Autowired
     private UserDAO UserDAO;
+    @Autowired
+    private com.example.kafka_demo3.mapper.UserDAO2 UserDAO2;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/jemeter1")
     public void test1() throws InterruptedException {
@@ -21,7 +28,8 @@ public class TestController {
     @RequestMapping("/addOrder")
     public void addOrder(){
         User user = new User();
-        UserDAO.save(user);
+        List<User> byName = UserDAO.findByName("");
+        List<User> ceeshi = userService.findByName("ceeshi");
     }
 
 }
