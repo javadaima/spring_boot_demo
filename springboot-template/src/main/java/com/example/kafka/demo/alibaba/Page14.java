@@ -1,11 +1,9 @@
-package com.example.kafka.alibaba;
+package com.example.kafka.demo.alibaba;
 
 import com.example.kafka.model.User;
-import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 

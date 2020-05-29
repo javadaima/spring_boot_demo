@@ -1,4 +1,4 @@
-package com.example.kafka.alibaba;
+package com.example.kafka.demo.alibaba;
 
 import org.junit.jupiter.api.Test;
 

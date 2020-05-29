@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "com.example.kafka.mapper")
-public class KafkaDemo3Application {
+public class SpringbootTemplateApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KafkaDemo3Application.class, args);
+        SpringApplication.run(SpringbootTemplateApplication.class, args);
     }
 
 }

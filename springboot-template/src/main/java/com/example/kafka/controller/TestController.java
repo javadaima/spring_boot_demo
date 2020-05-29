@@ -4,6 +4,7 @@ import com.example.kafka.mapper.UserDAO;
 import com.example.kafka.model.User;
 import com.example.kafka.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,8 @@ public class TestController {
     private com.example.kafka.mapper.UserDAO2 UserDAO2;
     @Autowired
     private UserService userService;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping("/jemeter1")
     public void test1() throws InterruptedException {
@@ -31,5 +34,13 @@ public class TestController {
         List<User> byName = UserDAO.findByName("");
         List<User> ceeshi = userService.findByName("ceeshi");
     }
+
+    @RequestMapping("/testRedis")
+    public void testRedis(){
+        redisTemplate.opsForValue().set("test20200529","test20200529");
+        Object test20200529 = redisTemplate.opsForValue().get("test20200529");
+        System.out.println(124);
+    }
+    
 
 }
