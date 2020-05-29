@@ -34,13 +34,9 @@ public class TestController {
         List<User> byName = UserDAO.findByName("");
         List<User> ceeshi = userService.findByName("ceeshi");
     }
+    
 
-    @RequestMapping("/testRedis")
-    public void testRedis(){
-        redisTemplate.opsForValue().set("test20200529","test20200529");
-        Object test20200529 = redisTemplate.opsForValue().get("test20200529");
-        System.out.println(124);
-    }
+    
     
 
 }
