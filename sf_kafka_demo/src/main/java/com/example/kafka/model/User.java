@@ -3,7 +3,7 @@ package com.example.kafka.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="sys_user2")
+@Table(name="sys_user")
 public class User {
 
     @Id   // 表明id
@@ -19,6 +19,22 @@ public class User {
     private Integer age;
     @Column(name="SEX")
     private String sex;
+
+    @Override
+    public int hashCode() {
+        return id.intValue();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof User) {
+            User student = (User) obj;
+            return this.id == student.id;
+        }
+        else {
+            return false;
+        }
+    }
 
     public Long getId() {
         return id;

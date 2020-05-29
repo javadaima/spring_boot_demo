@@ -3,7 +3,7 @@ package com.example.kafka_demo3.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="sys_user2")
+@Table(name="sys_user")
 public class User {
 
     @Id   // 表明id

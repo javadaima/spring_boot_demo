@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis2/demo.iml" filepath="$PROJECT_DIR$/redis2/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis2/demo (1).iml" filepath="$PROJECT_DIR$/redis2/demo (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/design_pattern/design_pattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis/redis.iml" filepath="$PROJECT_DIR$/redis/redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis2/redis2.iml" filepath="$PROJECT_DIR$/redis2/redis2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring_boot_demo.iml" filepath="$PROJECT_DIR$/.idea/spring_boot_demo.iml" />

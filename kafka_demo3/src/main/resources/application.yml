@@ -5,7 +5,7 @@ spring:
     name: kafka-demo
   kafka:
     # 以逗号分隔的地址列表，用于建立与Kafka集群的初始连接(kafka 默认的端口号为9092)
-    bootstrap-servers: 106.54.34.74:9092
+    bootstrap-servers: 106.15.231.137:9092
     producer:
       # 发生错误后，消息重发的次数。
       retries: 0
@@ -42,7 +42,7 @@ spring:
       #missing-topics-fatal: false
 
   datasource:
-    url: jdbc:mysql://106.54.34.74:3306/test
+    url: jdbc:mysql://106.15.231.137:3306/test
     username: root
     password: root123
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -55,5 +55,8 @@ spring:
       properties:
         hibernate:
           dialect: org.hibernate.dialect.MySQL5Dialect
+  aop:
+    proxy-target-class: true
+    auto: true
 
 
