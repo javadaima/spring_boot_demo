@@ -1,6 +1,6 @@
 package com.example.kafka.controller;
 
-import com.example.kafka.service.KafkaTestService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class KafkaController {
 
     @Autowired
-    KafkaTestService kafkaTestService;
+    com.example.kafka.service.KafkaTestService kafkaTestService;
 
     @RequestMapping("/testKafka")
     public void test1(){

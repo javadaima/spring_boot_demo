@@ -11,5 +11,5 @@ public interface UserService {
     @Transactional
     void saveUser();
 
-    void getUser(Long id);
+    String getUser(Long id);
 }

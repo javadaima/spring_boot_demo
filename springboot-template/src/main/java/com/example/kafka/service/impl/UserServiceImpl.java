@@ -8,9 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,21 +26,25 @@ public class UserServiceImpl implements UserService {
         return ceshi;
     }
     @Override
-    @Transactional
+    @Transactional(rollbackFor=Exception.class)
     public void saveUser(){
         User user = new User();
+        user.setName("ceshi");
         userDAO.save(user);
+        TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
         logger.info(Thread.currentThread().getName());
+        //throw new RuntimeException("ceshi");
     }
 
     @Override
-    public void getUser(Long id) {
+    public String getUser(Long id) {
         User one = userDAO.getOne(id);
+        System.out.println(one.getName());
         if(one != null){
             System.out.println(Thread.currentThread().getName()+one.getId());
         }else{
             System.out.println(Thread.currentThread().getName()+id+"为null");
         }
-
+        return one.getId().toString();
     }
 }
