@@ -8,10 +8,11 @@ public class StaticProxyTest implements Person{
     }
 
     @Override
-    public void say() {
+    public String say() {
         System.out.println("之前");
         person.say();
         System.out.println("之后");
+        return "ccc";
     }
 
     public static void main(String[] args) {
