@@ -30,10 +30,6 @@ public class DynamicProxyTest implements InvocationHandler {
         person12.say();
 
         Man  man11= (Man)  Proxy.newProxyInstance(person1.getClass().getClassLoader(),person1.getClass().getInterfaces(),handler);
-        Class[] classes = new Class[1];
-        classes[0] = Person.class;
-        Man  man12= (Man)  Proxy.newProxyInstance(person1.getClass().getClassLoader(),classes,handler2);
         man11.run();
-        man12.run();
     }
 }
