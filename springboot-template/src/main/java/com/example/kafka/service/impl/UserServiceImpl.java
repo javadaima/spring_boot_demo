@@ -5,14 +5,16 @@ import com.example.kafka.model.User;
 import com.example.kafka.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.util.List;
+import java.util.Optional;
 
-@Service
+@Service("11")
 public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userDAO;
@@ -46,5 +48,16 @@ public class UserServiceImpl implements UserService {
             System.out.println(Thread.currentThread().getName()+id+"为null");
         }
         return one.getId().toString();
+    }
+
+    @Override
+    public void updateUser(User user,Long id) {
+        Optional<User> byId = userDAO.findById(id);
+        if(byId.isPresent()){
+            User user1 = byId.get();
+            BeanUtils.copyProperties(user,user1,new String[]{"id"});
+            userDAO.save(user1);
+        }
+
     }
 }

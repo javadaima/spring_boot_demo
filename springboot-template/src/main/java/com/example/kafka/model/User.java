@@ -1,6 +1,5 @@
 package com.example.kafka.model;
 
-import com.example.kafka.config.MyConvert;
 
 import javax.persistence.*;
 
@@ -15,7 +14,6 @@ public class User {
     private String name ;
     @Column(name="PHONE_NUMBER")
     private String phoneNumber ;
-    @Convert(converter = MyConvert.class)
     @Column(name="PASSWORD")
     private String password;
     @Column(name="AGE")

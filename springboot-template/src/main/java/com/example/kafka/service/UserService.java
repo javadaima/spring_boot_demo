@@ -12,4 +12,6 @@ public interface UserService {
     void saveUser();
 
     String getUser(Long id);
+
+    void updateUser(User user,Long id);
 }
