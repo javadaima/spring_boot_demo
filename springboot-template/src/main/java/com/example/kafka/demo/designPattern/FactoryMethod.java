@@ -11,14 +11,12 @@ public class FactoryMethod {
         void show();
     }
     public static class Product1 implements AbstractProduct{
-
         @Override
         public void show() {
             System.out.println("这是Product1");
         }
     }
     public static class Product2 implements AbstractProduct{
-
         @Override
         public void show() {
             System.out.println("这是Product2");

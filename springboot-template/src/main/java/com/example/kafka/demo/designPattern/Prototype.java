@@ -1,5 +1,7 @@
 package com.example.kafka.demo.designPattern;
 
+import org.springframework.web.servlet.DispatcherServlet;
+
 /**
  * 原型模式：
  * 主要通过clone方法复制对象
@@ -7,7 +9,6 @@ package com.example.kafka.demo.designPattern;
 public class Prototype implements Cloneable{
 
     private Prototype prototype;
-
 
     @Override
     protected Prototype clone() throws CloneNotSupportedException {

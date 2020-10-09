@@ -54,6 +54,11 @@ public class AesUtil{
         return new String(result, DEFAULT_CHARSET);
     }
 
+    public static void main(String[] args) throws Exception {
+        String str = encrypt("测试1测试1测试1测试1", "314");
+        String decrypt = decrypt(str, "314");
+        System.out.println(str);
+    }
  
     /**
      * 生成加密秘钥

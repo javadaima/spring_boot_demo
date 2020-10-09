@@ -2,6 +2,7 @@ package com.example.kafka.demo.designPattern;
 
 /**
  * 代理模式：有点类似于装饰模式，代理类需要伪装成目标类，起到鱼目混珠色效果
+ * 涉及：spring的aop
  */
 public class Proxy {
 

@@ -1,6 +1,9 @@
 package com.example.kafka.config;
 
+import com.example.kafka.model.User;
 import com.example.kafka.util.AesUtil;
+import org.apache.ibatis.builder.xml.XMLMapperBuilder;
+import org.apache.ibatis.session.Configuration;
 
 import javax.persistence.AttributeConverter;
 
@@ -27,6 +30,9 @@ public class MyConvert implements AttributeConverter<String, String> {
         return s;
     }
 
+    public static void main(String[] args) {
+
+    }
 
 
 
